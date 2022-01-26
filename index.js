@@ -4,9 +4,11 @@ class Game {
   #gameHeading = document.querySelector(".game-heading");
   #player1DiceValue;
   #player2DiceValue;
+
   constructor() {
     this.#setIntialDice(6);
   }
+
   #setIntialDice(dice) {
     this.#player1DiceImg.src = `images/dice${dice}.png`;
     this.#player2DiceImg.src = `images/dice${dice}.png`;
@@ -19,6 +21,7 @@ class Game {
     this.#player2DiceValue = dice2;
     this.#setHeading();
   }
+
   #setHeading() {
     if (this.#player1DiceValue > this.#player2DiceValue)
       return (this.#gameHeading.textContent = "Player 1 Wins!");
